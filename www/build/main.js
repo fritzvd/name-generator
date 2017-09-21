@@ -56389,7 +56389,7 @@ var HomePage = (function () {
     };
     HomePage.prototype.genName = function () {
         this.name = this.nameGeneratorService.getName();
-        this.log = this.nameGeneratorService.getCheck();
+        // this.log = this.nameGeneratorService.getCheck();
     };
     return HomePage;
 }());
@@ -77164,7 +77164,7 @@ var NameGeneratorService = (function () {
         });
     };
     NameGeneratorService.prototype.getData = function (franchise) {
-        return this.http.get("/assets/franchises/" + franchise + ".json")
+        return this.http.get("assets/franchises/" + franchise + ".json")
             .map(function (res) { return res.json(); });
     };
     NameGeneratorService.prototype.getCheck = function () {

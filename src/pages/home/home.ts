@@ -22,7 +22,7 @@ export class HomePage {
 
   genName():void {
     this.name = this.nameGeneratorService.getName()
-    this.log = this.nameGeneratorService.getCheck();
+    // this.log = this.nameGeneratorService.getCheck();
   }
 
 }

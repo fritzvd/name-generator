@@ -39,7 +39,7 @@ export class NameGeneratorService {
   }
 
   getData(franchise) {
-    return this.http.get(`/assets/franchises/${franchise}.json`)
+    return this.http.get(`assets/franchises/${franchise}.json`)
     .map(res => res.json())
   }
 
