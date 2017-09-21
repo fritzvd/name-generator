@@ -1,14 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Name Generator
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  Choose a franchise.
+  <ion-label>Franchise</ion-label>
+  <ion-select [(ngModel)]="franchise" (ngModelChange)="onFranChange($event)">
+    <ion-option value="sw">Star Wars</ion-option>
+    <ion-option value="lotr">Lord of the Rings</ion-option>
+  </ion-select>
+  <button ion-button color="dark" (click)="genName()">Generate a name</button>
+  <h1>{{ name }}</h1>
+  <h1>{{ log }}</h1>
+
 </ion-content>
